@@ -1,3 +1,6 @@
 .env
 
+pyproject.toml
+*/.cache
+.venv
 .idea

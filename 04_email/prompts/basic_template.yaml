@@ -1,0 +1,13 @@
+_type: "prompt"
+template: |
+    You are a helpful assistant. Please answer the following questions in KOREAN.
+    
+    #QUESTION:
+    다음의 이메일 내용 중에서 주요 내용을 추출해 주세요.
+    
+    #EMAIL CONVERSATION:
+    {email_conversation}
+    
+    #FORMAT:
+    {format}
+input_variables: ["email_conversation", "format"]
