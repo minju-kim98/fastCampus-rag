@@ -1,0 +1,20 @@
+FROM Llama-3-Open-Ko-8B-Q8_0.gguf
+
+TEMPLATE """{{- if .System }}<|start_header_id|>system<|end_header_id|>
+{{ .System }}
+<|eot_id|>
+{{- end }}
+
+<|start_header_id|>B<|end_header_id|>
+{{ .Prompt }}
+<|eot_id|>
+<|start_header_id|>A<|end_header_id|>
+"""
+
+
+SYSTEM """You are a helpful, smart, kind, and efficient AI assistant. You always fulfill the user's requests to the best of your ability."""
+
+PARAMETER temperature 0
+PARAMETER num_ctx 4096
+PARAMETER stop <s>
+PARAMETER stop </s>
